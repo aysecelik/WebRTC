@@ -1,0 +1,93 @@
+<html>
+<style>
+    .peervideo{
+        width: 96%; 
+        margin:2%
+    }
+    .text{
+        color: gray;
+        font-size: 15px;
+        font-weight: bold;
+        top: 12;
+        border-bottom: 2px solid gray;
+        margin-left: 2%;
+        width:96%;
+        margin-top:3%;
+    }
+    .title{
+        color: gray;
+        font-size: 15px;
+        font-weight: bold;
+        top: 12;
+        border-bottom: 2px solid gray;
+        margin-left: 2%;
+        width:96%;
+        text-align: center;
+
+    }
+    .card-style{
+        width: 45%;
+        position: relative;
+        background:lightgray;
+        border-radius: 5px;
+        float:left;
+        margin-left:3%;
+        margin-top: 2%;
+    }
+    .video-class{
+        width: 96%; 
+        margin:2%
+    }
+    .video-frame{
+        background-color: lightslategray; 
+        width:90%; 
+        border-radius: 2%; 
+        margin:5%
+    }
+    .button-local{
+        margin-left: 40%;
+        width: 20%;
+        margin-top:1%;
+        background-color: #4c90af; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5%;
+    }
+    .button-local:hover {
+        background-color: lightgray; /* Green */
+        color: white;
+        cursor: pointer;
+    }
+
+</style>
+<head>
+    <title>OPEN ZEKA WEBRTC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="title">OPEN ZEKA WEBRTC</div>
+    <div id="connect" class="button-local"> CONNECT
+    </div>
+
+    <div class="card-style"> 
+    <div class="text">LOCAL STREAM</div>
+            <div class="video-frame" >
+                    <video class="video-class" muted style="width: 96%; margin:2%"></video>
+            </div>
+    </div>
+    <div class="card-style"> 
+            <div class="text">REMOTE STREAM</div>
+                <div id="peerDiv" class="video-frame" >
+                </div>
+    </div>
+        
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
